@@ -1,0 +1,119 @@
+/* 1- header desgin  */
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 30px rgb(158, 82, 152);
+}
+header ul.flex {
+  gap: 16px;
+}
+
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+
+header button.menu {
+  display: none;
+}
+header button {
+  font-size: 1.2rem;
+}
+
+/* Model -- pop up */
+header .fixed {
+  position: fixed;
+  inset:0;
+  z-index: 11;
+  background-color: rgba(40, 40, 48, 0.91);
+  backdrop-filter:blur(0.3px);
+}
+
+
+
+@keyframes mymove  {
+  0%{scale :0 ;}
+  100%{scale:1;}
+}
+header .fixed ul.model{
+  scale: 0.8;
+  width: 85%; 
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  border-radius: 1rem; 
+  padding: 1rem 2rem; 
+  background-color: var(--secondary); 
+animation: mymove 0.7s 1;
+}
+header .fixed ul.model li{
+  border-bottom: 1px solid var(--border); 
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;  
+} 
+header .fixed ul.model li:last-child{
+  border:none;
+} 
+header .fixed ul.model li a{ 
+  font-size: 1rem;
+} 
+header .fixed ul.model li:first-child{ 
+ text-align: right;
+ border: none;
+
+padding-top: 0.2rem;  
+padding-bottom: 0rem;
+
+}
+/* icon button*/
+header .icon-cog, header button.mode{
+  background-color: var(--bgHeader);
+  height: 2rem;
+  width: 2rem;
+justify-content: center ;
+text-align: center;
+border-radius: 50%;
+color: var(--subtitle);
+border: 1px solid rgb(244,165,96),0.249; 
+}
+header .icon-cog:hover, header button.mode:hover{
+  color: var(--title);
+  border: 1px solid rgb(244,165,96);
+  transition: 0.2s;
+}
+header .icon-x{
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+
+}
+header .icon-x:hover{
+font-size: 1.7rem;
+color: crimson;
+rotate: 180deg;
+}
+hearder .icon-sun{
+  color: yellow;
+}
+/* medie query ( responsive Design) */
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+  header button.menu  {
+    display: block;
+  }
+}
